@@ -21,9 +21,8 @@ export class ChatComponent implements OnInit {
 
   receive(){
     this.webSockerService.listen().subscribe((data:any) => {
-      console.log('Array',data);
-       [...this.displaymsgs,data]
-    //  this.displaymsgs.push(data) 
+     
+      this.displaymsgs.push(data) 
      console.log(this.displaymsgs);
      return;
       

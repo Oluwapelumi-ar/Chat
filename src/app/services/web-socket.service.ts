@@ -8,7 +8,7 @@ import io from 'socket.io-client';
 
 export class WebSocketService {
   socket:any;
-  socketUrl:string = 'http://localhost:8000'
+  socketUrl:string = 'https://chat-appo.herokuapp.com/'
 
   constructor(){
     this.socket = io(this.socketUrl)
