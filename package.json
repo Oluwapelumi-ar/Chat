@@ -7,8 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "postinstall": "ng build --prod",
-    "deploy:gh":"ng build --prod --base-href='https://oluwapelumi-ar/github.io/Shuks'"
+    "postinstall": "ng build --prod"
   },
   "private": true,
   "dependencies": {

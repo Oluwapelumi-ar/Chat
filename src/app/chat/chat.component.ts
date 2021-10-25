@@ -17,16 +17,15 @@ export class ChatComponent implements OnInit {
   ngOnInit(): void {
     this.webSockerService;
     this.receive();
+    console.log(this.displaymsgs);
+    
   }
 
   receive(){
     this.webSockerService.listen().subscribe((data:any) => {
-     
       this.displaymsgs.push(data) 
      console.log(this.displaymsgs);
-     return;
-      
-      
+     return this.displaymsgs; 
     })
   }
 
@@ -34,8 +33,6 @@ export class ChatComponent implements OnInit {
     let sent = this.webSockerService.sendMessage(sendForm.value)
     sendForm.controls.message.reset();
     return  sent ;
-    
   }
-
 
 }
